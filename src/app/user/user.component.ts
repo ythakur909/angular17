@@ -8,13 +8,9 @@ import {
   signal,
 } from '@angular/core';
 import { DUMMY_USERS } from '../dummy-user';
+import { User } from './user.model';
 const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
 
-interface User {
-  id: string;
-  avatar: string;
-  name: string;
-}
 @Component({
   selector: 'app-user',
   standalone: true,
@@ -28,6 +24,7 @@ export class UserComponent {
   // @Input({ required: true }) name!: string;
 
   @Input({ required: true }) user!: User;
+  @Input({ required: true }) selected!: boolean;
   @Output() select = new EventEmitter<string>();
   // avatar = input.required<string>();
   // name = input.required<string>();
