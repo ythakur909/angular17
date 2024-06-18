@@ -7,14 +7,6 @@ import { DUMMY_USERS } from './dummy-user';
 import { TasksComponent } from './tasks/tasks.component';
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterOutlet,
-    HeaderComponent,
-    UserComponent,
-    TasksComponent,
-  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
